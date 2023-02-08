@@ -21,6 +21,8 @@ class MemoCollectionViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: configuration)
     }
     
     // MARK: セルの個数を決めるメソッド
